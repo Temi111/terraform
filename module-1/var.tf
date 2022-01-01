@@ -1,4 +1,4 @@
-/*variable "AWS_ACCESS_KEY" {
+variable "AWS_ACCESS_KEY" {
   
 }
 
@@ -11,10 +11,20 @@ variable "AWS_REGION" {
 }
 
 variable "AMIS" {
-  type = map(string)
+  type = map(string) 
   default = {
-    us-east-1 = "ami-13be557e"
-    us-west-2 = "ami-06b94666"
-    eu-west-1 = "ami-0d729a60"
+    eu-central-1 = "ami-09042b2f6d07d164a"
+    eu-west-2 = "ami-09a2a0f7d2db8baca"
+    us-west-2 = "ami-0688ba7eeeeefe3cd"
   }
-} */
+} 
+variable "PATH_TO_PRIVATE_KEY" {
+  default = "mykey"
+}
+
+variable "PATH_TO_PUBLIC_KEY" {
+  default = "mykey.pub"
+}
+variable "INSTANCE_USERNAME" {
+  default = "ubuntu"
+}
